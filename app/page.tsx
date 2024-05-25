@@ -2,15 +2,19 @@
 
 import ArticleComponent from "@/app/components/ArticleComponent";
 import {useIsMobile} from "@/public/hooks/useIsMobile";
+import MobileArticleComponent from '@/app/components/MobileArticleComponent';
 
 export default function Home() {
   const isMobile = useIsMobile();
 
   if (isMobile) return (
-    <div>
-      sfsdfsdf
-    </div>
+    <div style={{padding:"40px 16px"}}>
+      <MobileArticleComponent visibleContents={false} />
 
+      <MobileArticleComponent type={"sub"} />
+      <MobileArticleComponent type={"sub"} />
+
+    </div>
   )
 
   return (

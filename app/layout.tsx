@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 import "./reset.css"
 import localFont from "next/font/local";
-import Link from 'next/link';
+import HeaderComponent from '@/app/components/HeaderComponent';
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -22,51 +22,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
 
-  const categoryList = [
-    {label :"정치" , value: "politic"},
-    {label :"전국" , value: "politic"},
-    {label :"경제" , value: "politic"},
-    {label :"국제" , value: "politic"},
-    {label :"문화" , value: "politic"},
-    {label :"스포츠" , value: "politic"},
-    {label :"미래과학" , value: "politic"},
-    {label :"오피니언" , value: "politic"},
-    {label :"사설" , value: "politic"},
-    {label :"칼럼" , value: "politic"},
-  ]
-
   return (
     <html lang="kr" className={`${pretendard.variable}`}>
       <body className={pretendard.className} style={{backgroundColor: "white"}}>
-        <div style={{width: "1200px", height: "100%", margin: "auto"}}>
-          <div style={{
-            height: '80px',
-            display: 'flex',
-            justifyContent: 'center',
-            alignItems: 'center'
-          }}>
-            <Link href={"/"} style={{textDecoration: "none"}}>
-              logo
-            </Link>
-          </div>
-          <div style={{
-            backgroundColor : "white",
-            height: "78px",
-            borderBottom: "solid 1px #CED4DA",
-            display: 'flex',
-            justifyContent: 'space-around',
-            alignItems: 'center'
-          }}>
-            { categoryList.map((item: any, index: number) => (
-                <Link href={`/category/${item.value}`} style={{padding: "8px 12px 0", color: "#495057", textDecoration: "none"}}>
-                  {item.label}
-                </Link>
-              )
-            )
-            }
-          </div>
+        <div id={"container"} style={{height: "100%", margin: "auto"}}>
+         <HeaderComponent />
           {children}
-          <div style={{backgroundColor: "#343A40", height: "150px"}}>
+          <div style={{backgroundColor: "#343A40", height: "100px"}}>
             푸터
           </div>
         </div>

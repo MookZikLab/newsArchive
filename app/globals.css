@@ -1,3 +1,5 @@
-p {
-    font-family: Pretendard;
+#container {
+    @media (min-width: 720px) { /* or 301 if you want really the same as previously.  */
+        width: 1200px;
+    }
 }
