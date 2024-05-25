@@ -22,11 +22,11 @@ const ArticleComponent = ({articleNumber = 1, type = "main", visibleContents = t
 
         {
           visibleContents &&
-          <p style={{
+          <div style={{
             color: "#868E96",
             fontWeight: 400,
             fontSize: `${type === "main" ? "24px" : "20px"}`,
-            display: 'box',
+            display: "-webkit-box",
             marginTop: '1px',
             maxHeight: '80px',
             overflow: 'hidden',
@@ -38,7 +38,7 @@ const ArticleComponent = ({articleNumber = 1, type = "main", visibleContents = t
           }}>
             content zczczxczczxczxczcxzxczczxcz xczxczxczxczxczczxczxczcxzzxczxczxcz czzczczxczczxczxczcxzxczczx
             czxczxczxczxczxczczxczxczcxzzxczxczxczcz
-          </p>
+          </div>
         }
       </div>
     </Link>
