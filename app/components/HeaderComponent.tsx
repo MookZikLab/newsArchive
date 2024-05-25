@@ -22,10 +22,10 @@ const HeaderComponent = () => {
   ]
 
   return (
-    <div style={{backgroundColor : "white"}}>
+    <div style={{backgroundColor : "white", borderBottom: '1px solid #F1F3F5',}}>
       {
         isMobile ?
-          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems:"center",borderBottom: '1px solid #F1F3F5', height: '56px', padding: "0 20px" }}>
+          <div style={{ display: 'flex', justifyContent: 'space-between', alignItems:"center", height: '56px', padding: "0 20px" }}>
             <Link href={'/'}> logo </Link>
             <div>menu</div>
           </div>
@@ -49,6 +49,8 @@ const HeaderComponent = () => {
               justifyContent: 'space-around',
               alignItems: 'center'
             }}>
+              <div style={{width: "1200px", display: "flex", justifyContent: "space-between"}}>
+
               {categoryList.map((item: any, index: number) => (
                   <Link href={`/category/${item.value}`}
                         style={{ padding: "8px 12px 0", color: "#495057", textDecoration: "none", fontWeight:600 }}>
@@ -57,6 +59,7 @@ const HeaderComponent = () => {
                 )
               )
               }
+              </div>
             </div>
           </>
        }

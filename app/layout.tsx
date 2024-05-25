@@ -24,13 +24,13 @@ export default function RootLayout({
 
   return (
     <html lang="kr" className={`${pretendard.variable}`}>
-      <body className={pretendard.className} style={{backgroundColor: "white"}}>
-        <div id={"container"} style={{height: "100%", margin: "auto"}}>
-         <HeaderComponent />
+      <body className={pretendard.className} style={{ backgroundColor: "white" }}>
+        <HeaderComponent />
+        <div id={"container"} style={{ height: "100%", margin: "auto" }}>
           {children}
-          <div style={{backgroundColor: "#343A40", height: "100px"}}>
-            푸터
-          </div>
+        </div>
+        <div style={{ backgroundColor: "#343A40", height: "100px" }}>
+          푸터
         </div>
       </body>
     </html>
