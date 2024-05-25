@@ -10,9 +10,23 @@ const ArticleComponent = ({articleNumber = 1, type = "main", visibleContents = t
 
   return (
     <Link href={`/article/${articleNumber}`} style={{textDecoration: 'none', borderBottom: `${type === "main" ? "none" : "solid 1px #DEE2E6"}` }}>
-      <div className={"title"} style={{height: `${type === "main" ? "60px" : "36px"}`, padding: "10px 0", display: 'flex', alignItems: "center"}}>
-        <h2 style={{fontWeight: 600, color: "#343A40", fontSize : `${type === "main" ? "40px" : "24px"}`, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap",}}>
-          尹 대통령 김치찌개 만찬 “언론인 해외 연수, 내년부터 세 자리로”
+      <div className={"title"} style={{height: `${type === "main" ? "auto" : "auto"}`, padding: "10px 0", display: 'flex', alignItems: "center"}}>
+        <h2 style={{
+          fontWeight: 600,
+          color: "#343A40",
+          fontSize : `${type === "main" ? "40px" : "24px"}`,
+          display: "-webkit-box",
+          marginTop: '1px',
+          maxHeight: '100px',
+          overflow: 'hidden',
+          verticalAlign: 'top',
+          textOverflow: 'ellipsis',
+          wordBreak: 'break-all',
+          WebkitBoxOrient: 'vertical',
+          WebkitLineClamp: '2',
+          lineHeight: `${type === "main" ? "51px" : "24px"}`
+        }}>
+          尹 대통령 김치찌개 만찬 “언론인 해외 연수, 내년부터 세 자리로” asdasdasdasdasdasdasdaasdas
         </h2>
       </div>
       <div className={"title-image"} style={{width: "100%", height: `${types.get(type).height ?? 300}px`, position:"relative"}}>
