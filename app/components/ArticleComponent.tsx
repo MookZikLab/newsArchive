@@ -10,7 +10,7 @@ const ArticleComponent = ({articleNumber = 1, type = "main", visibleContents = t
 
   return (
     <Link href={`/article/${articleNumber}`} style={{textDecoration: 'none', borderBottom: `${type === "main" ? "none" : "solid 1px #DEE2E6"}` }}>
-      <div className={"title"} style={{height: `${type === "main" ? "60px" : "36px"}`, padding: "10px 0"}}>
+      <div className={"title"} style={{height: `${type === "main" ? "60px" : "36px"}`, padding: "10px 0", display: 'flex', alignItems: "center"}}>
         <h2 style={{fontWeight: 600, color: "#343A40", fontSize : `${type === "main" ? "40px" : "24px"}`, overflow:"hidden", textOverflow:"ellipsis", whiteSpace:"nowrap",}}>
           제목 zczczxczczxczxczc xzxczczxczxczxczxczxcz xczczxczxczcxzzxczxczxczcz
         </h2>
@@ -24,7 +24,7 @@ const ArticleComponent = ({articleNumber = 1, type = "main", visibleContents = t
           visibleContents &&
           <p style={{
             color: "#868E96",
-            fontWeight: 500,
+            fontWeight: 400,
             fontSize: `${type === "main" ? "24px" : "20px"}`,
             display: 'box',
             marginTop: '1px',

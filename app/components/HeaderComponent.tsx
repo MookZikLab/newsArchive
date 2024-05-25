@@ -51,7 +51,7 @@ const HeaderComponent = () => {
             }}>
               {categoryList.map((item: any, index: number) => (
                   <Link href={`/category/${item.value}`}
-                        style={{ padding: "8px 12px 0", color: "#495057", textDecoration: "none" }}>
+                        style={{ padding: "8px 12px 0", color: "#495057", textDecoration: "none", fontWeight:600 }}>
                     {item.label}
                   </Link>
                 )
